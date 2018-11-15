@@ -28,4 +28,13 @@ example(of: "Append") {
     print(linkedList)
 }
 
+example(of: "Node at") {
+    //Adding Value to front of the list
+    var linkedList = LinkedList<Int>()
+    linkedList.append(3)
+    linkedList.append(2)
+    linkedList.append(1)
+    print(linkedList.node(at: 0)?.value ?? "Empty")
+}
+
 

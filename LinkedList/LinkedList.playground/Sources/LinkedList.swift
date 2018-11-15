@@ -23,6 +23,18 @@ public struct LinkedList<Value> {
             tail = tail?.next
         }
     }
+    public func node(at index:Int) -> Node<Value>? {
+        var current = head
+        var currentIndex = 0
+        while current != nil {
+            if (index == currentIndex) {
+                return current
+            }
+            currentIndex += 1
+            current = current?.next
+        }
+        return nil
+    }
 }
 
 extension LinkedList:CustomStringConvertible {
