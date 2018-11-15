@@ -8,11 +8,19 @@ public struct LinkedList<Value> {
         return head == nil
     }
     public mutating func push(_ val:Value) {
-        if (isEmpty) {
+        if isEmpty {
             head = Node(value: val)
             tail = head
         } else {
             head = Node(value: val, next:head)
+        }
+    }
+    public mutating func append(_ val:Value) {
+        if isEmpty {
+            push(val)
+        } else {
+            tail?.next = Node(value: val)
+            tail = tail?.next
         }
     }
 }

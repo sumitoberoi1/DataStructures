@@ -19,3 +19,13 @@ example(of: "Push") {
     print(linkedList)
 }
 
+example(of: "Append") {
+    //Adding Value to front of the list
+    var linkedList = LinkedList<Int>()
+    linkedList.append(3)
+    linkedList.append(2)
+    linkedList.append(1)
+    print(linkedList)
+}
+
+
