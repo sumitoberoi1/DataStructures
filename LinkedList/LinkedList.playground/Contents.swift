@@ -38,3 +38,14 @@ example(of: "Node at") {
 }
 
 
+
+example(of: "Insert Node") {
+    //Adding Value to front of the list
+    var linkedList = LinkedList<Int>()
+    linkedList.append(3)
+    linkedList.append(1)
+    if let node = linkedList.node(at: 0) {
+        linkedList.insetNodeAfter(node, value: 2)
+        print(linkedList)
+    }
+}

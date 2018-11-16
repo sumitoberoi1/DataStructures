@@ -35,6 +35,14 @@ public struct LinkedList<Value> {
         }
         return nil
     }
+    public mutating func insetNodeAfter(_ node:Node<Value>, value:Value) -> Node<Value> {
+        if (node === tail) {
+            append(value)
+            return tail!
+        }
+        node.next = Node(value: value, next: node.next)
+        return node.next!
+    }
 }
 
 extension LinkedList:CustomStringConvertible {
